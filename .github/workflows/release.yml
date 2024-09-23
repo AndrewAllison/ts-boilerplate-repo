@@ -24,6 +24,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      # Set Git user details to avoid author identity issues
       - name: Set Git user
         run: |
           git config user.name "github-actions[bot]"
@@ -32,6 +33,10 @@ jobs:
       - name: Run Standard Version
         run: pnpm release
 
+      # Authenticate using the GITHUB_TOKEN and push the changes
       - name: Push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
           git push --follow-tags origin main
