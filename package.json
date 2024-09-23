@@ -9,7 +9,8 @@
     "commit": "cz",
     "test": "jest --config jest.config.ts",
     "lint": "eslint .",
-    "release": "standard-version",
+    "release:dry": "semantic-release --dry-run",
+    "release": "semantic-release",
     "knip": "knip"
   },
   "keywords": [],
