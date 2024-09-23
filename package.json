@@ -1,6 +1,6 @@
 {
   "name": "typescript-project",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple boiler-plate repo for ts node projects with pnpm",
   "main": "index.js",
   "type": "module",
