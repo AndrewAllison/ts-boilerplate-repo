@@ -42,6 +42,7 @@ jobs:
           git push --follow-tags origin main
 
   draft-release:
+    needs: release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
