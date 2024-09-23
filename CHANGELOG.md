@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/AndrewAllison/ts-boilerplate-repo/compare/v1.1.0...v1.1.1) (2024-09-23)
+
+
+### Bug Fixes
+
+* dont pub to npm yet ([b7feb10](https://github.com/AndrewAllison/ts-boilerplate-repo/commit/b7feb10498fb5adaeb145d1af0e137b38b6b7f9d))
+
 # [1.1.0](https://github.com/AndrewAllison/ts-boilerplate-repo/compare/v1.0.7...v1.1.0) (2024-09-23)
 
 
