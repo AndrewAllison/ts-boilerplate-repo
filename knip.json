@@ -1,0 +1,10 @@
+{
+  "entry": ["src/**/*.ts"],
+  "project": "tsconfig.json",
+  "ignore": ["**/*.test.ts"],
+  "tsConfig": {
+    "exclude": ["node_modules"]
+  },
+  "ignoreBinaries": ["lint-staged"],
+  "ignoreDependencies": ["jest-config", "ts-node"]
+}
