@@ -9,6 +9,8 @@ jobs:
   release:
     if: github.event.pull_request.merged == true && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Ensure write permissions
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -24,7 +26,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      # Set Git user details to avoid author identity issues
       - name: Set Git user
         run: |
           git config user.name "github-actions[bot]"
@@ -33,7 +34,6 @@ jobs:
       - name: Run Standard Version
         run: pnpm release
 
-      # Authenticate using the GITHUB_TOKEN and push the changes
       - name: Push changes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
